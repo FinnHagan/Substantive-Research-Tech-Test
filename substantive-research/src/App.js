@@ -1,22 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { getProductBenchmarks, getExchangeRates } from './services/apiService';
 
 function App() {
+  const [benchmarks, setBenchmarks] = useState([]);
+  const [exchangeRates, setExchangeRates] = useState([]);
+  
+  // Verify data is being fetched successfully from API
+  useEffect(() => {
+    const fetchData = async () => {
+      const productBenchmarks = await getProductBenchmarks();
+      const exchangeRates = await getExchangeRates();
+
+      console.log('Product Benchmarks:', productBenchmarks);
+      console.log('Exchange Rates:', exchangeRates);
+
+      // Set state with fetched data
+      setBenchmarks(productBenchmarks);
+      setExchangeRates(exchangeRates);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Substantive Research</h1>
+        <p>Fetching product benchmarks and exchange rates...</p>
       </header>
     </div>
   );
