@@ -1,0 +1,36 @@
+/* Basic styling for provider summary table */
+table.provider-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.provider-summary-table th,
+.provider-summary-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.provider-summary-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.provider-summary-table tr.negative {
+    background-color: #f8d7da;
+    /* Light red shows negative difference*/
+}
+
+.provider-summary-table tr.positive {
+    background-color: #d4edda;
+    /* Light green shows positive difference */
+}
+
+.provider-summary-table tr:hover {
+    background-color: #f1f1f1;
+    /* Highlights row on hover */
+}
