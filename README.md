@@ -9,10 +9,10 @@ Please ensure you have the following are installed:
 
 ## Installation Steps
 
-1. **Clone the repository**
+1. **Clone the repository Using Git Bash**
    ```sh
    git clone https://github.com/FinnHagan/Substantive-Research-Tech-Test.git
-   cd <repository_directory>
+   cd <repository_directory> (cd Substantive-Research-Tech-Test/)
    cd substantive-research
    ```
 
@@ -31,8 +31,8 @@ Please ensure you have the following are installed:
 4. **Environment Variables**
    Create a `.env` file in the "substantive-research" directory and add the following environment variables:
    ```env
-   REACT_APP_API_BASE_URL=<URL provided in document>
-   REACT_APP_API_KEY=<AUTH key provided in document>
+   REACT_APP_API_BASE_URL=<URL provided in the Technical Test Document>
+   REACT_APP_API_KEY=<AUTH key provided in the Technical Test Document>
    ```
 
 5. **Run the application**
